@@ -73,9 +73,6 @@ def insertionsort[A](f: A => A => Boolean, list: List[A]): List[A] = {
   list.foldLeft(Nil:List[A]) ((acc, head) => insertion(f, acc, head))
 }
 
-//insertionsort(x => y => x > y, List(3,2,4,5,1,2,2,7,6))
-//insertionsort(x => y => x < y, List(3,2,4,5,1,2,2,7,6))
-
 //zad 5.1.b
 
 def insertsort[A](f: A => A => Boolean, list: List[A]): List[A] = {
@@ -102,16 +99,6 @@ def merge[A](f: A => A => Boolean, list1: List[A], list2: List[A]): List[A] = {
   }
 }
 
-//def halfList(list: List[Int]): (List[Int], List[Int]) = {
-//  list match {
-//    case Nil => (Nil, Nil)
-//    case _::Nil => (list, Nil)
-//    case first::second::tail =>
-//      val (list1, list2) = halfList(tail)
-//      (first::list1, second::list2)
-//  }
-//}
-
 def halfList[A](list: List[A]): (List[A], List[A]) = {
   @tailrec
   def halfListRec[A](list: List[A], list1: List[A], list2: List[A]):  (List[A], List[A]) = {
@@ -132,10 +119,6 @@ def mergesort[A](f: A => A => Boolean, list: List[A]): List[A] = {
       merge(f, mergesort(f, list1), mergesort(f, list2))
   }
 }
-
-//mergesort(x=>y=> x>y, List(3,2,4,5,1,2,2,7,6))
-//mergesort(x=>y=> x<y, List(3,2,4,5,1,2,2,7,6))
-
 
 //zad 2.1
 def curry3[A, B, C, D](f: A => B => C => D)(x: A, y: B, z: C): D = {

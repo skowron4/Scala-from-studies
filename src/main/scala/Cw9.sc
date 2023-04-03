@@ -73,26 +73,6 @@ println(new Pojazd("A", "B", 2016))
 println(new Pojazd("A", "B", 2016, "XYZ"))
 println(new Pojazd("A", "B",  rg = "XYZ"))
 
-//zad 4
-// Demonstracja wykorzystania metod getMessage i printStackTrace,
-// dziedziczonych przez wszystkie klasy wyjatkow.
-
-//def metoda3() = {
-//  throw new Exception( "Wyjatek zgloszony w metoda3" )
-//}
-//def metoda2() = {
-//  metoda3()
-//}
-//def metoda1() = {
-//  metoda2()
-//}
-//
-//try {
-//  metoda1
-//} catch {
-//  case e : Throwable => println(e.getMessage)
-//}
-
 //zad.1.1
 class Time11(var hour: Int){
   if (hour < 0) hour = 0

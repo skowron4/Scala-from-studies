@@ -1,23 +1,4 @@
 import scala.collection.mutable
-//class Mutable[-T] (private[this] var x : T) {
-//}
-
-// 1.a Mutator error
-
-// 1.b
-// var -> val
-// +T -> T
-// private[this]
-
-// 1.c
-// Accesor error
-
-//val s = new Mutable();
-
-//zad 2
-//abstract class Sequence[+A] {
-//  def append[B >: A](x: Sequence[B]): Sequence[B]
-//}
 
 //zad 3
 class EmptyQueueException(msg: String) extends Exception(msg)

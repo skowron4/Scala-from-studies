@@ -77,21 +77,6 @@ def depthSearch[A](g: Graph[A])(startNode: A): List[A] = {
 
 depthSearch(g)(4)
 
-/*def depthSearch[A](g: Graph[A])(startNode: A):List[A] = {
-  @tailrec
-  def depthSearchInn(visited: List[A])(queue: List[A])(acc: List[A]):List[A] = {
-    queue match {
-      case Nil => acc
-      case hd::tl =>
-        if(visited.contains(hd)) depthSearchInn(visited)(tl)(acc)
-        else depthSearchInn(hd::visited)((g succ hd):::tl)(hd::acc)
-    }
-  }
-  depthSearchInn(Nil)(List(startNode))(Nil).reverse
-}
-
-depthSearch(g)(4)*/
-
 //zad 3.1
 sealed trait BT[+A]
 case object Empty extends BT[Nothing]

@@ -2,14 +2,6 @@ import scala.annotation.tailrec
 
 // zad1
 def irepeat[A](k: Int, lazyList: LazyList[A]): LazyList[A] = {
-//  def irepeatRec(a: Int, ll: LazyList[A]): LazyList[A] = {
-//    (a, ll) match {
-//      case (_, LazyList()) => LazyList()
-//      case (0, _#::tl) => irepeatRec(k, tl)
-//      case (_, hd#::_) => hd#::irepeatRec(a - 1, ll)
-//    }
-//  }
-//  irepeatRec(k, lazyList)
   lazyList.foldLeft(LazyList.empty[A])( (s, i) => LazyList.from(1).take(k).map(_ => i).appended(s))
 }
 
